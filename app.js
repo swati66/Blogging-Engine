@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSantizer());
 app.use(methodOverride("_method"));
 
-mongoose.connect("mongodb://localhost/BlogApp");
+var url = process.env.DATABASEURL || "mongodb://localhost/BlogApp"
+mongoose.connect(url);
 
 var blogSchema = new mongoose.Schema({
     title: String,
