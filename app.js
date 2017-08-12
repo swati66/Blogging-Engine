@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSantizer());
 app.use(methodOverride("_method"));
 
+console.log(process.env.DATABASEURL);
+
 var url = process.env.DATABASEURL || "mongodb://localhost/BlogApp";
 mongoose.connect(url,{useMongoClient: true});
 
