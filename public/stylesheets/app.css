@@ -10,11 +10,11 @@
     margin-top: 2em;
 }
 
-/*.ui.segment{*/
-/*    width: 55%;*/
-/*    padding: 5%;*/
-/*    margin: 7.0em auto;*/
-/*}*/
+.ui.segment{
+    width: 65%;
+    padding: 5%;
+    margin: 7.0em auto;
+}
 
 .ui.secondary.button{
     position: absolute;
