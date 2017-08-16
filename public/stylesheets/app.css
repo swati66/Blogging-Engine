@@ -10,20 +10,25 @@
     margin-top: 2em;
 }
 
+/*.ui.segment{*/
+/*    width: 65%;*/
+/*    padding: 5%;*/
+/*    margin: 7.0em auto;*/
+/*}*/
+
 .ui.segment{
-    width: 65%;
-    padding: 5%;
-    margin: 7.0em auto;
+    /*position: relative;*/
+    width:95%;
+    margin: 2px auto;
+    top: 5vh;
+    
+    
+}
+.buttons{
+    height: 10%;
+    margin-bottom: 2px;
 }
 
-.ui.secondary.button{
-    position: absolute;
-    top: 2%;
-    right: 120px;
-}
-
-.ui.negative.button{
-    position: absolute;
-    top: 2%;
-    right: 10px;
+.content{
+    margin-top: 10px;
 }

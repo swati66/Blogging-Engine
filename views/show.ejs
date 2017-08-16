@@ -1,13 +1,15 @@
 <% include partials/header %>
-<div class="ui segment">
-  <div id="menu">
+<div class="ui items">
+  <div class="item">
+    <div class="ui segment">
+  <div class="buttons">
       <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
-        <button class="ui negative  basic large button">Delete</button>
+        <button class="ui right floated negative  basic small button">Delete</button>
       </form>
-      <a class="ui secondary basic large button" href="/blogs/<%= blog._id %>/edit">Edit</a>
-    </div>
-  <img class="ui centered medium image" src="<%= blog.image%>">
-   <div class="content">
+      <a class="ui right floated secondary basic small button" href="/blogs/<%= blog._id %>/edit">Edit</a>
+  </div>
+  <div class="image"><img class="ui centered medium image" src="<%= blog.image%>"></div>
+  <div class="content">
       <a class="header"><%= blog.title%></a>
       <div class="description">
         <p><%- blog.body %></p>
@@ -17,6 +19,12 @@
       </div>
   </div>
 </div>
+
+  </div>
+</div>
+
+
+
 
 <div class="ui items">
   <div class="item">
