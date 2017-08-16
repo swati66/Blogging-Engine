@@ -13,6 +13,7 @@ app.use(methodOverride("_method"));
 
 
 var url = process.env.DATABASEURL || "mongodb://localhost/BlogApp";
+
 mongoose.connect(url,{useMongoClient: true});
 
 var blogSchema = new mongoose.Schema({
@@ -26,7 +27,7 @@ var Blog = mongoose.model("Blog", blogSchema);
 
 // Blog.create({
 //     title: "Rainy Blues",
-//     image: "https://www.bou-lderdowntown.com/_files/images/3691825088_1c420bb71c.jpg",
+//     image: "https://previews.123rf.com/images/lassedesignen/lassedesignen1503/lassedesignen150300017/37465689-Pug-in-the-Rain-Stock-Photo-dog-rain-sad.jpg",
 //     body: "Monsoon has finally kicked in. And so has all its moods!"
 // });
 
