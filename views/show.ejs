@@ -1,12 +1,7 @@
 <% include partials/header %>
 <div class="ui segment items">
   <div class="item">
-      <div id="menu">
-        <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
-          <button class="ui negative  basic large button">Delete</button>
-        </form>
-        <a class="ui secondary basic large button" href="/blogs/<%= blog._id %>/edit">Edit</a>
-      </div>
+      
       <div class="image">
         <img class="ui centered image" src="<%= blog.image%>">
       </div>
@@ -19,9 +14,32 @@
       </div>
       <div class="extra content">
         <p>
-          <%= blog.created.toGMTString() %>
+          
         </p>
       </div>
+  </div>
+</div>
+
+<div class="ui items">
+  <div class="item">
+    <div class="image">
+      <img src="<%= blog.image%>">
+    </div>
+    <div class="content">
+      <a class="header"><%= blog.title%></a>
+      <div class="description">
+        <p><%- blog.body %></p>
+      </div>
+      <div class="extra">
+        <%= blog.created.toGMTString() %>
+      </div>
+    </div>
+    <div id="menu">
+      <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+        <button class="ui negative  basic large button">Delete</button>
+      </form>
+      <a class="ui secondary basic large button" href="/blogs/<%= blog._id %>/edit">Edit</a>
+    </div>
   </div>
 </div>
 
