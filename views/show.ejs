@@ -15,7 +15,7 @@
         <p><%- blog.body %></p>
       </div>
       <div class="extra">
-        <%= blog.created.toGMTString() %>
+        <p><%= moment.utc(blog.created).tz('Asia/Kolkata').format('YYYY-MMM-DD h:mm A')%> </p> 
       </div>
   </div>
 </div>

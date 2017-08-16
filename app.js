@@ -3,6 +3,8 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     methodOverride= require("method-override"),
     expressSantizer= require("express-sanitizer"),
+    moment = require("moment"),
+    tz = require("moment-timezone"),
     app = express();
     
 app.set("view engine", "ejs");
@@ -43,7 +45,7 @@ app.get("/blogs", function(req, res){
       res.redirect("/blogs")
       
       else{
-          res.render("index", {blogs: blogs});
+          res.render("index", {blogs: blogs, moment: moment, tz: tz});
       }
    });
 });
@@ -72,7 +74,7 @@ app.get("/blogs/:id", function(req, res){
        if(err){
            console.log(err);
        } else {
-           res.render("show", {blog: blog});
+           res.render("show", {blog: blog, moment: moment, tz: tz});
        }
    });
    

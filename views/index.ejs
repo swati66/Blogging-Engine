@@ -15,10 +15,10 @@
                <div class="content">
                  <a class="header" href="/blogs/<%= blog._id %>"><%=blog.title%></a>
                  <div class="meta">
-                   <p><%= blog.created.toGMTString() %> </p> 
+                   <p><%= moment.utc(blog.created).tz('Asia/Kolkata').format('YYYY-MMM-DD h:mm A')%> </p> 
                  </div>
                  <div class="description">
-                   <p><%= blog.body.substring(0, 80) %> </p>  
+                   <p><%= blog.body %> </p>  
                  </div>
                  <div class="extra">
                      <a class="ui floated basic violet button" href="/blogs/<%= blog._id %>">
