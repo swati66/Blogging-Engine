@@ -1,32 +1,35 @@
-.code.icon{
-    font-size: 2em;
+
+
+.code.icon {
+	font-size: 2em;
 }
 
-.container.main{
-    margin-top: 6.0em;
+.container.main {
+	margin-top: 6.0em;
 }
 
-.title{
-    margin-top: 2em;
+.title {
+	margin-top: 2em;
 }
 
-/*.ui.segment{*/
-/*    width: 65%;*/
-/*    padding: 5%;*/
-/*    margin: 7.0em auto;*/
-/*}*/
 
-.ui.segment{
-    /*position: relative;*/
-    width:95%;
-    margin: 2px auto;
-    top: 5vh;
-}
-.buttons{
-    height: 10%;
-    margin-bottom: 2px;
+.ui.segment {
+	/*position: relative;*/
+	width: 95%;
+	margin: 2px auto;
+	top: 5vh;
 }
 
-.content{
-    margin-top: 10px;
+.buttons {
+	height: 10%;
+	margin-bottom: 2px;
 }
+
+.content {
+	width: 75%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 5px;
+	margin-top: 10px;
+}
+

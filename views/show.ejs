@@ -1,39 +1,33 @@
 <% include partials/header %>
 <div class="ui items">
-  <div class="item">
-    <div class="ui segment">
-  <div class="buttons">
-      <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
-        <button class="ui right floated negative  basic small button">Delete</button>
-      </form>
-      <a class="ui right floated secondary basic small button" href="/blogs/<%= blog._id %>/edit">Edit</a>
-  </div>
-  <div class="image"><img class="ui centered medium image" src="<%= blog.image%>"></div>
-  <div class="content">
-      <a class="header"><%= blog.title%></a>
-      <div class="description">
-        <p><%- blog.body %></p>
+   <div class="item">
+      <div class="ui segment">
+         <div class="buttons">
+            <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+               <button class="ui right floated negative  basic small button">Delete</button>
+            </form>
+            <a class="ui right floated secondary basic small button" href="/blogs/<%= blog._id %>/edit">Edit</a>
+         </div>
+         <div class="image"><img class="ui centered medium image" src="<%= blog.image%>"></div>
+         <div class="content">
+            <a class="header"><%= blog.title%></a>
+            <div class="extra">
+               <p><%= moment.utc(blog.created).tz('Asia/Kolkata').format('YYYY-MMM-DD h:mm A')%> </p>
+            </div>
+            <br>
+            <div class="description">
+               <p style="padding-bottom: 50px;"><%- blog.body %></p>
+            </div>
+         </div>
       </div>
-      <div class="extra">
-        <p><%= moment.utc(blog.created).tz('Asia/Kolkata').format('YYYY-MMM-DD h:mm A')%> </p> 
-      </div>
-  </div>
+   </div>
 </div>
-
-  </div>
-</div>
-
-
-
-
 <div class="ui items">
-  <div class="item">
-    <div class="image">
-      <img >
-    </div>
-   
-    
-  </div>
+   <div class="item">
+      <div class="image">
+         <img >
+      </div>
+   </div>
 </div>
-
 <% include partials/footer %>
+
